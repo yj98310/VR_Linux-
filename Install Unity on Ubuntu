@@ -1,0 +1,4 @@
+Download Official Unity file for ubuntu 16.04
+http://download.unity3d.com/download_unity/unity-editor-5.1.0f3+2015090301_amd64.deb
+cd ~/Downloads
+sudo apt-get install unity-editor-5.1.0f3+2015090301_amd64.deb
