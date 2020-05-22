@@ -1,21 +1,29 @@
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-// add ROS storage in Ros-latest.list and add key 
-sudo apt-get update && sudo apt-get upgrade 
-sudo apt-get install ros-kinetic-desktop-full   // install ros kinetic 
-sudo apt-get install ros-kinetic-rqt*  // for using various rqt plugin 
-sudo rosdep init // rosdep initialize 
-rosdep update 
-sudo apt-get install python-rosinstall //ros package install
-source /opt/ros/kinetic/setup.bash
-mkdir -p ~/catkin_ws/src   // make catkin workspace for ros 
-cd ~/catkin_ws/src
-catkin_init_workspace
-cd ~/catkin_ws/
-catkin_make 
-ls
-Build
-Devel
-Src
-source ~/catkin_ws/devel/setup.bash
-roscre // finally test ROS 
+1. Setup sources.list
+  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+2. Setup keys
+  sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+3. Install
+  sudo apt-get update && sudo apt-get upgrade 
+  sudo apt-get install ros-kinetic-desktop-full   // install ros kinetic 
+  sudo apt-get install ros-kinetic-rqt*  // for using various rqt plugin 
+4. Install rosinstall
+  sudo apt-get install python-rosinstall
+5.Make ROS workspace
+  mkdir -p ~/catkin_ws/src
+  cd ~/catkin_ws/src
+  catkin_init_workspace
+  cd ~/catkin_ws/
+  catkin_make
+  source devel/setup.bash
+  echo $ROS_PACKAGE_PATH /home/youruser/catkin_ws/src:/opt/ros/kinetic/share
+6. Environment Setup
+  nano ~/.bashrc 
+  # Load ROS Kinetic Setup
+  source /opt/ros/kinetic/setup.bash
+  source ~/catkin_ws/devel/setup.bash
+
+  # Configure ROS Network
+  export ROS_LOCALIP=xxx.xxx.xxx.xxx   // typing your own ip , you can find it by ifconfig
+  export ROS_MASTER_URI=http://${ROS_LOCALIP}:11311 
+  
+  source ~/.bashrc  
