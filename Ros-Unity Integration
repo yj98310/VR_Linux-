@@ -1,10 +1,9 @@
- roslaunch rosbridge_server rosbridge_websocket.launch 
- rosrun rqt_graph rqt_graph // open another terminal 
- Download ros-sharp zip file from git hub
- -> https://github.com/siemens/ros-sharp
- Add rossharp file from ros-sharp zip to Unity Assets
- Make GameObject and change name to 'RosConnector' 
- Add component 'Ros Connector(script)' and 'Pose Stamped Subscirber(script)'
- Change 'Ros Connector's Url to Ros_master_uri
+ 1. Type below code on terminal
+    roslaunch rosbridge_server rosbridge_websocket.launch 
+    rosrun rqt_graph rqt_graph // open another terminal 
+ 2. Add rossharp file from ros-sharp zip to Unity Assets
+ 3. Make GameObject and change name to 'RosConnector' 
+ 4. Add component 'Ros Connector(script)' and 'Pose Stamped Subscirber(script)'
+ 5. Change 'Ros Connector's Url to Ros_master_uri
    ( i found it form typing ifconfig in terminal )
    
