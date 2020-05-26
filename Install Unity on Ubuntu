@@ -4,7 +4,7 @@ Method1
 2.cd ~/Downloads
 3.sudo apt-get install unity-editor-5.1.0f3+2015090301_amd64.deb
 
-Method2
+Method2(Better)
 1. sudo apt install libgtk2.0-0 libsoup2.4-1 libarchive13 libpng16-16 libgconf-2-4 lib32stdc++6 libcanberra-gtk-module
 2. sudo apt-get install mono-devel
 3. Download Unity Hub 
