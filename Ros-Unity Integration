@@ -1,6 +1,7 @@
  1. Type below code on terminal
+    sudo apt-get install ros-kinetic-rosbridge-server
     roslaunch rosbridge_server rosbridge_websocket.launch 
-    rosrun rqt_graph rqt_graph // open another terminal 
+    rosrun rqt_graph rqt_graph // open another terminal
  2. Add rossharp file from ros-sharp zip to Unity Assets
  3. Make GameObject and change name to 'RosConnector' 
  4. Add component 'Ros Connector(script)' and 'Pose Stamped Subscirber(script)'
