@@ -1,0 +1,4 @@
+1. Download Asset 'Steam VR' 
+  (it is in the Unity Asset Store) 
+2. Edit -> Project Settings -> Player -> XR settings and check Virtual Reality Supported 
+3. Search 'Camera Rig'&'Player' in SteamVR asset and Add them to the Sample Scene
