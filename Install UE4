@@ -1,0 +1,21 @@
+#Download UnrealEngine ZIP
+1. Move to 'UnrealEngine.com'
+2. Click 'Get Started Now' button
+3. Fill the 'Join the Community' form and click 'Sign Up'
+4. Move to 'GitHub.com' and Sign in
+5. Back to 'UnrealEngine.com' and click 'Connected Accounts'
+6. You can see 'GITHUB' icon and click it
+7. To authorize connect, click 'Authorize EpicGames'
+8. Move to 'https://github.com/EpicGames/UnrealEngine' and click 'Clone or download'
+
+#Build UE4 in Linux
+1. cd ~/Downloads/UnrealEngine-release/
+2. ./Setup.sh
+3. ./GenerateProjectFiles.sh
+4. make SlateViewer
+5. make ShaderCompileWorker UnrealLightmass UnrealPak UE4Editor
+
+#Run UE4 in Linux
+1. cd ~/Downloads/UnrealEngine/Engine/Binareis/Linux/
+2. ./UE4Editor
+3. Make a New Project
