@@ -17,13 +17,16 @@
   source devel/setup.bash
   echo $ROS_PACKAGE_PATH /home/youruser/catkin_ws/src:/opt/ros/kinetic/share
 6. Environment Setup
-  nano ~/.bashrc 
-  # Load ROS Kinetic Setup
+  gedit ~/.bashrc 
+  # Set ROS Kinetic
   source /opt/ros/kinetic/setup.bash
   source ~/catkin_ws/devel/setup.bash
 
-  # Configure ROS Network
-  export ROS_LOCALIP=xxx.xxx.xxx.xxx   // typing your own ip , you can find it by ifconfig
+  # Set ROS Network 
+  export ROS_LOCALIP=192.168.0.4  
   export ROS_MASTER_URI=http://${ROS_LOCALIP}:11311 
-  
-  source ~/.bashrc  
+
+  #Set ROS alias command 
+  alias cw='cd ~/catkin_ws'
+  alias cs='cd ~/catkin_ws/src'
+  alias cm='cd ~/catkin_ws && catkin_make'
